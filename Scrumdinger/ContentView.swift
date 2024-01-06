@@ -8,17 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    let scrum: DailyScrum
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        CardView(scrum: scrum)
+            .padding()
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView(scrum: DailyScrum(title: "", attendees: ["String"], lengthMinutes: 1, theme: .bubblegum))
 }
