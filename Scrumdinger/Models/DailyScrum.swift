@@ -14,11 +14,11 @@ struct DailyScrum: Identifiable {
     var lengthInMinutes: Int
     var theme: Theme
     
-    init(id: UUID = UUID(), title: String, attendees: [String], lengthMinutes: Int, theme: Theme) {
+    init(id: UUID = UUID(), title: String, attendees: [String], lengthInMinutes: Int, theme: Theme) {
         self.id = id
         self.title = title
         self.attendees = attendees.map {Attendee(name: $0)}
-        self.lengthInMinutes = lengthMinutes
+        self.lengthInMinutes = lengthInMinutes
         self.theme = theme
     }
 }
@@ -35,7 +35,7 @@ extension DailyScrum {
     }
     
     static var emptyScrum: DailyScrum {
-        DailyScrum(title: "", attendees: [], lengthMinutes: 5, theme: .sky)
+        DailyScrum(title: "", attendees: [], lengthInMinutes: 5, theme: .sky)
     }
 }
 
@@ -44,11 +44,11 @@ extension DailyScrum {
 extension DailyScrum {
     static let sampleData: [DailyScrum] =
     [
-        DailyScrum(title: "Analysist", attendees: ["Emin", "Onat", "Ecem"], lengthMinutes: 5, theme: .yellow),
-        DailyScrum(title: "iOS", attendees: ["Ali", "Enes"], lengthMinutes: 5, theme: .orange),
-        DailyScrum(title: "Android", attendees: ["Gizem", "Oğuzhan"], lengthMinutes: 5, theme: .green),
-        DailyScrum(title: "Backend", attendees: ["Hamdi", "Kadir"], lengthMinutes: 5, theme: .magenta),
-        DailyScrum(title: "Product Owner", attendees: ["Ozan"], lengthMinutes: 5, theme: .indigo)
+        DailyScrum(title: "Analysist", attendees: ["Emin", "Onat", "Ecem"], lengthInMinutes: 5, theme: .yellow),
+        DailyScrum(title: "iOS", attendees: ["Ali", "Enes"], lengthInMinutes: 5, theme: .orange),
+        DailyScrum(title: "Android", attendees: ["Gizem", "Oğuzhan"], lengthInMinutes: 5, theme: .green),
+        DailyScrum(title: "Backend", attendees: ["Hamdi", "Kadir"], lengthInMinutes: 5, theme: .magenta),
+        DailyScrum(title: "Product Owner", attendees: ["Ozan"], lengthInMinutes: 5, theme: .indigo)
         
     
     ]
