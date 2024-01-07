@@ -16,5 +16,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView(scrum: DailyScrum(title: "", attendees: ["String"], lengthMinutes: 1, theme: .bubblegum))
+    ContentView(scrum: DailyScrum(title: "", attendees: ["String"], lengthInMinutes: 1, theme: .bubblegum))
 }
