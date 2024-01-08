@@ -8,11 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    let scrum = DailyScrum.sampleData
+    @State var scrum = DailyScrum.sampleData
     var body: some View {
-//        CardView(scrum: scrum)
-//            .padding()
-        ScrumsView(scrums: scrum)
+        ScrumsView(scrums: $scrum)
     }
 }
 
